@@ -7,6 +7,8 @@ Authors@R:
 Description: Convenience functions for interacting with the DNA Database 
     ("DLIMS") used at the Manchester Genomic Laboratory Hub.
 Imports:
+    DBI,
+    odbc,
     stringr
 License: MIT + file LICENSE
 Encoding: UTF-8

@@ -12,7 +12,7 @@ parse_ncc <- function(input_string) {
   
   ncc_regex <- stringr::regex(
     r"[
-  (>\d{2}% | \d{2}-\d{2}%)
+  (>\d{2}% | \d{1,2}-\d{1,2}% | \d{1,3}%)
   ]",
   comments = TRUE
   )

@@ -8,6 +8,9 @@ Description: Convenience functions for interacting with the DNA Database
     ("DLIMS") used at the Manchester Genomic Laboratory Hub.
 Imports:
     DBI,
+    dplyr,
+    dbplyr,
+    janitor,
     odbc,
     stringr
 License: MIT + file LICENSE

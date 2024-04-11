@@ -15,8 +15,8 @@ R-LIMS consists of useful functions for connecting and querying D-LIMS
 with R using an odbc connection, with dplyr queries automatically
 converted into SQL queries with the dbplyr package.
 
-The aim of R-LIMS is to simplify and streamline interacting with D-LIMS
-at scale, for development projects and for audits.
+R-LIMS aims to simplify and streamline interacting with D-LIMS at scale,
+for development projects and for audits.
 
 ## Installation
 

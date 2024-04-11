@@ -37,7 +37,7 @@ Using rlms requires you have to have to have an ODBC connection to the DLIMS ser
 
 ## Example
 
-To begin with, set up the ODBC connection which connects to the server mirror version of the DLIMS database.
+To begin with, set up the ODBC connection which connects to the server mirror version of the DLIMS database using `connect_odbc()`.
 
 ```{r example}
 library(rlims)

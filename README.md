@@ -36,7 +36,7 @@ have any issues with this.
 ## Example
 
 To begin with, set up the ODBC connection which connects to the server
-mirror version of the DLIMS database.
+mirror version of the DLIMS database using `connect_odbc()`.
 
 ``` r
 library(rlims)

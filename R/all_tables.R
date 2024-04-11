@@ -2,7 +2,7 @@
 #'
 #'`all_tables()` shows all the table objects within the DLIMS database. It's a useful
 #'function for navigating around the database, and can be used alongside `get_columns()`
-#'to understand how each table is structured..
+#'to understand how each table is structured...
 #'
 #' @return A dataframe of table objects
 #' @export

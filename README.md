@@ -35,7 +35,8 @@ have any issues with this.
 
 ## Example
 
-To begin with, set up the ODBC connection.
+To begin with, set up the ODBC connection which connects to the server
+mirror version of the DLIMS database.
 
 ``` r
 library(rlims)

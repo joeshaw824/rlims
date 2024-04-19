@@ -25,7 +25,7 @@ get_columns <- function(table_input,
     schema_name = {{ schema }},
     name = table_input) |> 
     janitor::clean_names() |> 
-    dplyr::mutate("clean_name" = janitor::make_clean_names("name")) |> 
+    dplyr::mutate("clean_name" = janitor::make_clean_names(name)) |> 
     dplyr::relocate("clean_name") 
   
   if (cols == "narrow") {

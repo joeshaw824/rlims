@@ -38,6 +38,9 @@ have any issues with this.
 To begin with, you can set up the ODBC connection which connects to the
 server mirror version of the DLIMS database using `connect_odbc()`.
 
+Note: the get_columns function currently relies on a deprecated function
+which I need to fix.
+
 ``` r
 library(rlims)
 
@@ -56,13 +59,13 @@ head(get_columns("Samples", cols = "narrow"))
 #> This warning is displayed once every 8 hours.
 #> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
 #> generated.
-#>   clean_name field_type data_type column_size
-#> 1       name        int         4          10
-#> 2       name   nvarchar        -9           8
-#> 3       name  datetime2        -9          27
-#> 4       name  datetime2        -9          27
-#> 5       name   nvarchar        -9          50
-#> 6       name   nvarchar        -9          50
+#>        clean_name field_type data_type column_size
+#> 1         cons_id        int         4          10
+#> 2           labno   nvarchar        -9           8
+#> 3         date_in  datetime2        -9          27
+#> 4 activation_date  datetime2        -9          27
+#> 5    activated_by   nvarchar        -9          50
+#> 6         surname   nvarchar        -9          50
 ```
 
 Alternatively, some functions are stand-alone and are just useful for

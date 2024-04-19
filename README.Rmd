@@ -39,6 +39,8 @@ Using rlms requires you have to have to have an ODBC connection to the DLIMS ser
 
 To begin with, you can set up the ODBC connection which connects to the server mirror version of the DLIMS database using `connect_odbc()`.
 
+Note: the get_columns function currently relies on a deprecated function which I need to fix.
+
 ```{r example}
 library(rlims)
 

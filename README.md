@@ -35,8 +35,8 @@ have any issues with this.
 
 ## Example
 
-To begin with, set up the ODBC connection which connects to the server
-mirror version of the DLIMS database using `connect_odbc()`.
+To begin with, you can set up the ODBC connection which connects to the
+server mirror version of the DLIMS database using `connect_odbc()`.
 
 ``` r
 library(rlims)
@@ -46,4 +46,31 @@ connect_odbc()
 #> <OdbcConnection> guest@SQLPROD05
 #>   Database: master
 #>   Microsoft SQL Server Version: 14.00.3465
+
+# Check the column names for the "Samples" table
+head(get_columns("Samples", cols = "narrow"))
+#> Warning: `odbcConnectionColumns()` was deprecated in odbc 1.4.2.
+#> ℹ Please use `dbListFields()` instead.
+#> ℹ The deprecated feature was likely used in the rlims package.
+#>   Please report the issue to the authors.
+#> This warning is displayed once every 8 hours.
+#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+#> generated.
+#>   clean_name field_type data_type column_size
+#> 1       name        int         4          10
+#> 2       name   nvarchar        -9           8
+#> 3       name  datetime2        -9          27
+#> 4       name  datetime2        -9          27
+#> 5       name   nvarchar        -9          50
+#> 6       name   nvarchar        -9          50
+```
+
+Alternatively, some functions are stand-alone and are just useful for
+the kinds of projects I’ve been working on. For example the parse_ncc
+function just pulls out the neoplastic cell content from a string of
+text.
+
+``` r
+parse_ncc("Tumour neoplastic cell content was 20% but mutation wasn't found")
+#> [1] "20%"
 ```
